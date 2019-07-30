@@ -29,7 +29,7 @@ import android.widget.Toast;
 @SuppressLint("NewApi")
 public class BTClient extends Activity {
 
-    private final static String TAG = BTClient.class.getSimpleName();
+    private final static String TAG = "sos";//BTClient.class.getSimpleName();
 
     public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
     public static final String EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS";
@@ -37,7 +37,7 @@ public class BTClient extends Activity {
     private String mDeviceName;
     private String mDeviceAddress;
     private BluetoothLeService mBluetoothLeService; //BLE收发服务
-    private boolean mConnected = false;
+    private boolean mConnected = true;//false;
 
 	private final static int REQUEST_CONNECT_DEVICE = 1; // 宏定义查询设备句柄
 
@@ -359,7 +359,8 @@ public class BTClient extends Activity {
 	{
         //当已经连接上时才发送
 		if(mConnected){
-            mBluetoothLeService.writeCharacteristic(data);
+            //mBluetoothLeService.writeCharacteristic(data);
+            Log.i(TAG, "data:"+data);
 		}
 	}
 	
