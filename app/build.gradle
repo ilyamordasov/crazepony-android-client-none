@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 25
+    buildToolsVersion "25"
 
     defaultConfig {
         applicationId "com.test.Crazepony"
-        minSdkVersion 5
-        targetSdkVersion 17
+        targetSdkVersion 25
     }
 
     buildTypes {
